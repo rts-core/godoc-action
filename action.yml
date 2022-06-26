@@ -1,0 +1,5 @@
+name: 'Generate GoDoc To GhPages'
+description: 'Generates static GoDoc site, and pushes it to GHPages'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
