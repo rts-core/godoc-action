@@ -1,5 +1,12 @@
-name: 'Generate GoDoc To GhPages'
-description: 'Generates static GoDoc site, and pushes it to GHPages'
+name: 'Generate GoDoc HTML files'
+description: 'Generates static GoDoc site, for use in pushing to GHPages or the like.'
+inputs:
+  html_dir:
+    description: 'Set a directory to be used for generating HTML files into'
+    required: false
+    default: '.docs'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.html_dir }}
