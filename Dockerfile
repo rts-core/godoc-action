@@ -1,7 +1,8 @@
 FROM golang:1.18-buster
 
 ENV GOPATH /
-RUN go get golang.org/x/tools/cmd/godoc
+RUN go install golang.org/x/tools/cmd/godoc@latest
 COPY ./script.sh /bin/script.sh
+RUN chmod +x /bin/script.sh
 
-CMD ["/bin/script.sh"]
+ENTRYPOINT ["/bin/script.sh"]

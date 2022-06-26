@@ -5,8 +5,13 @@ inputs:
     description: 'Set a directory to be used for generating HTML files into'
     required: false
     default: '.docs'
+  ignore_src:
+    description: 'Flag for whether .go files are included. Greatly increases size and build time, and does not work with most hosting. Recommended flagged true.'
+    required: false
+    default: 'true'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.html_dir }}
+    - ${{ inputs.ignore_src }}
