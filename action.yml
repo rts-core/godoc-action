@@ -1,5 +1,9 @@
 name: 'Generate GoDoc HTML files'
 description: 'Generates static GoDoc site, for use in pushing to GHPages or the like.'
+author: 'Lucas Roe'
+branding:
+  icon: 'folder-plus'
+  color: 'purple'
 inputs:
   html_dir:
     description: 'Set a directory to be used for generating HTML files into'
